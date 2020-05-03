@@ -31,6 +31,11 @@ Vue.use(ElementUI)
     path: '/search',
     name: 'search',
     component:()=>import('@/views/SearchPage.vue')
+  },
+  {
+    path: '/GoodsDetail',
+    name: 'GoodsDetail',
+    component:()=>import('@/views/GoodsDetail.vue')
   }
 ]
 
