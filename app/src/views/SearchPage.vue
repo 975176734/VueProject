@@ -25,7 +25,7 @@
     </el-input>
     
     <!-- 搜索显示 -->
-    <!-- <div class="picture" v-for="(item,index) in items" :key="index">
+    <div class="picture" v-for="(item,index) in items" :key="index">
       <a href="#" v-if="picture">
         <img :src="item.src" alt />
       </a>
@@ -33,21 +33,21 @@
         <video :src="item.src" controls="controls"></video>
       </a>
       <AddToCar :id="item.id" :type="item.type"></AddToCar>
-    </div> -->
+    </div>
 	<!-- 搜索图片显示 -->
-	<RelatedImages :mydata='items' :title='title'></RelatedImages>
+	<!-- <RelatedImages :mydata='items' :title='title'></RelatedImages> -->
     <ShoppingCar></ShoppingCar>
   </div>
 </template>
 
 
 <script>
-import RelatedImages from '../components/RelatedImages.vue'
+// import RelatedImages from '../components/RelatedImages.vue'
 import AddToCar from "../components/AddToCar.vue"
 import ShoppingCar from "../components/ShoppingCar.vue"
 export default {
   name: "SearchBar",
-  components:{AddToCar,RelatedImages,ShoppingCar},
+  components:{AddToCar,ShoppingCar},
   data() {
     return {
       input1: "",
