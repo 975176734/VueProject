@@ -34,15 +34,17 @@
       </a>
       <AddToCar :id="item.id" :type="item.type"></AddToCar>
     </div>
+    <ShoppingCar></ShoppingCar>
   </div>
 </template>
 
 
 <script>
 import AddToCar from "../components/AddToCar.vue"
+import ShoppingCar from "../components/ShoppingCar.vue"
 export default {
   name: "SearchBar",
-  components:{AddToCar},
+  components:{AddToCar,ShoppingCar},
   data() {
     return {
       input1: "",
