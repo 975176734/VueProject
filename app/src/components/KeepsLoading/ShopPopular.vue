@@ -4,9 +4,10 @@
 		<div class="infinite-list-wrapper" style="overflow:auto">
 			<div class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled">
 				<div v-for="i in count" class="list-item" :key="i">
-					<a href="#">
+					<router-link :to="{name:'GoodsDetail', query:{ message:mydata[i]}}">
 						<img :src="mydata[i].src" >
-					</a><AddToCar :id="mydata[i].id" :type="mydata[i].type"></AddToCar>
+					</router-link>
+					<AddToCar :id="mydata[i].id" :type="mydata[i].type"></AddToCar>
 				</div>
 			</div>
 			<p v-if="loading" class="loading">加载中...</p>

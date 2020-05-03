@@ -9,6 +9,7 @@ module.exports = app => {
   router.get('/login', controller.home.login);
   router.get('/search', controller.search.search);
   router.get('/goods', controller.home.goods);
+  router.get('/SimilarImg', controller.home.SimilarImg);
   router.get('/AddToCar', controller.addtocar.addtocar);
   router.get('/GetCar', controller.getcar.getcar);
   router.get('/RemoveItem',controller.removeitem.removeitem)

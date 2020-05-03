@@ -5,5 +5,10 @@ class UserService extends Service {
     const data = await this.app.mysql.query(sql);
     return data;
   }
+  async  SimilarImg(paramObj) {
+    const sql=`select * from picture where species = "${paramObj.species}"`
+    const data = await this.app.mysql.query(sql);
+    return data;
+  }
 }
 module.exports = UserService;

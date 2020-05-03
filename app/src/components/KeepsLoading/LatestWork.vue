@@ -1,12 +1,12 @@
 <template>
-	<div class="LatestWork">
-		<!-- 最新作品组件 -->
+	<div class="ShopPopular">
+		<!-- 商店热门组件 -->
 		<div class="infinite-list-wrapper" style="overflow:auto">
 			<div class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled">
 				<div v-for="i in count" class="list-item" :key="i">
-					<a href="#">
+					<router-link :to="{name:'GoodsDetail', query:{ message:mydata[i]}}">
 						<img :src="mydata[i].src" >
-					</a>
+					</router-link>
 					<AddToCar :id="mydata[i].id" :type="mydata[i].type"></AddToCar>
 				</div>
 			</div>
@@ -28,7 +28,7 @@ import AddToCar from "../AddToCar.vue"
 		props:['mydata'],
 		computed: {
 			noMore() {
-				return this.count >=28
+				return this.count >= 28
 			},
 			disabled() {
 				return this.loading || this.noMore
@@ -48,7 +48,7 @@ import AddToCar from "../AddToCar.vue"
 </script>
 
 <style scoped="scoped">
-	.LatestWork {
+	.ShopPopular {
 		width: 1330px;
 	}
 

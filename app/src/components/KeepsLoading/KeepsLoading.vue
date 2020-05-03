@@ -8,6 +8,7 @@
 		</div>
 		<div>
 			<components :is="afflatus" :mydata='mydata'></components>
+			<!-- <wode :mydata='mydata'></wode> -->
 		</div>
 		
 	</div>
@@ -16,18 +17,23 @@
 	import HotRecommended from "./HotRecommended.vue"
 	import ShopPopular from "./ShopPopular.vue"
 	import LatestWork from "./LatestWork.vue"
+	// import wode from "./wode.vue"
 	export default {
 		data() {
 			return {
 				categoryArr: ["热门推荐", "商店热门", "最新作品"],
 				afflatus:HotRecommended,
-				mydata:''
-				
+				mydata:''			
 			}
 		},
 		methods:{
 			fn1(){
 				this.afflatus=HotRecommended;
+				this.axios("http://127.0.0.1:7001/goods?number=0")
+				.then((results)=>{
+					console.log(results.data)
+					this.mydata=results.data
+				})
 			},
 			fn2(){
 				this.afflatus=ShopPopular;
@@ -46,6 +52,19 @@
 				})
 			}
 			
+		},
+		components:{
+			HotRecommended,
+			ShopPopular,
+			LatestWork
+			
+		},
+		mounted() {
+			this.axios("http://127.0.0.1:7001/goods?number=0")
+			.then((results)=>{
+				console.log(results.data)
+				this.mydata=results.data
+			})
 		},
 	}
 </script>

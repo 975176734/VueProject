@@ -1,48 +1,31 @@
 <template>
 	<div class="ShopPopular">
 		<!-- 商店热门组件 -->
+		<div v-show="title.exhibition" class="mytitle">{{title.text}}</div>
 		<div class="infinite-list-wrapper" style="overflow:auto">
-			<div class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled">
-				<div v-for="i in count" class="list-item" :key="i">
-					<router-link :to="{name:'GoodsDetail', query:{ message:mydata[i]}}">
-						<img :src="mydata[i].src" >
+			<div class="list" >
+				<div v-for="(item,index) in mydata" class="list-item" :key="index">
+					<router-link :to="{name:'GoodsDetail', query:{ message:item}}">
+						<img :src="item.src" >
 					</router-link>
-					<AddToCar :id="mydata[i].id" :type="mydata[i].type"></AddToCar>
+					<AddToCar :id="item.id" :type="item.type"></AddToCar>
 				</div>
 			</div>
-			<p v-if="loading" class="loading">加载中...</p>
-			<p v-if="noMore" class="nomore">没有更多了</p>
 		</div>
 	</div>
 </template>
 
 <script>
-import AddToCar from "../AddToCar.vue"
+import AddToCar from "./AddToCar.vue"
 	export default {
 		data() {
 			return {
-				count: 8,
-				loading: false
+				
 			}
 		},
-		props:['mydata'],
-		computed: {
-			noMore() {
-				return this.count >= 28
-			},
-			disabled() {
-				return this.loading || this.noMore
-			}
-		},
-		methods: {
-			load() {
-				this.loading = true
-				setTimeout(() => {
-					this.count += 4
-					this.loading = false
-				}, 1200)
-			}
-		},
+		props:['mydata',"title"],
+		
+		
 		components:{AddToCar}
 	}
 </script>
@@ -51,7 +34,12 @@ import AddToCar from "../AddToCar.vue"
 	.ShopPopular {
 		width: 1330px;
 	}
-
+	.mytitle {
+		height: 60px;
+		width: 100%;
+		line-height: 60px;
+		font-size: 22px;
+	}
 	.list {
 		width: 100%;
 		display: flex;

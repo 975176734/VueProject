@@ -19,6 +19,11 @@ class HomeController extends Controller {
     var data = await this.service.goods.goods(this.ctx.query);
     this.ctx.body = data
   }
+  async SimilarImg() {
+    var data = await this.service.goods.SimilarImg(this.ctx.query);
+    this.ctx.body = data
+  }
+  
 }
 
 module.exports = HomeController;
