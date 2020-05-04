@@ -23,6 +23,11 @@ class HomeController extends Controller {
     var data = await this.service.goods.SimilarImg(this.ctx.query);
     this.ctx.body = data
   }
+
+  async getlunbopic(){
+    let data = await this.service.home.getlunbopic();
+    this.ctx.body = data
+  }
   
 }
 

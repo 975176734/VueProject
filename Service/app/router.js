@@ -14,4 +14,7 @@ module.exports = app => {
   router.get('/GetCar', controller.getcar.getcar);
   router.get('/RemoveItem',controller.removeitem.removeitem)
   router.get('/RemoveAllItem',controller.removeitem.RemoveAllItem)
+  router.get('/getMedia', controller.video.getMedia);
+  router.get('/getlunbopic', controller.home.getlunbopic);
+  router.post('/changePW', controller.mycenter.changePW);
 };

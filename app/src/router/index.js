@@ -36,6 +36,21 @@ Vue.use(ElementUI)
     path: '/GoodsDetail',
     name: 'GoodsDetail',
     component:()=>import('@/views/GoodsDetail.vue')
+  },
+  {
+  	  path:'/mycenter',
+  	  name:'mycenter',
+  	  component:()=>import('@/views/MycenterPage.vue'),
+  	  
+  	  beforeEnter:(to,from,next) =>{
+  		  console.log(window.localStorage)
+  		  if(to.path == '/mycenter'&& window.localStorage.length==2){
+  			  next()
+  		  }else{
+  			  alert("请先登录")
+  			  next('/Home')
+  		  }
+  	  }
   }
 ]
 
