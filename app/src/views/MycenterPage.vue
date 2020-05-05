@@ -6,16 +6,14 @@
       <!-- 头像部分 -->
       <el-header>
         <el-row :gutter="20">
-          <el-col :span="16">
+          <el-col :span="2">
             <div class="grid-content bg-purple">
               <span style="float: left; width: 0;height: 0;">{{myid}}</span>
-
               <!-- 头像展示 -->
               <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
             </div>
           </el-col>
-          <el-col :span="8">
-            <div class="grid-content bg-purple"></div>
+          <el-col :span="22">
           </el-col>
         </el-row>
       </el-header>
@@ -32,7 +30,7 @@
               >
                 <el-menu-item index="2" @click="myCollect">
                   <i class="el-icon-menu"></i>
-                  <span slot="title">我的收藏</span>
+                  <span slot="title">我的购物车</span>
                 </el-menu-item>
 
                 <el-menu-item index="4" @click="changePassword">
@@ -67,7 +65,8 @@ export default {
     return {
       subassembly: "Mygoods",
       myid: "username",
-      imageUrl: ""
+	  imageUrl: "",
+	  value: new Date()
     };
   },
   // 获取登录用户的name然后给data
@@ -95,13 +94,13 @@ export default {
 };
 </script>
 
-<style scope="scope">
+<style scoped>
 * {
   margin: 0;
 }
 .mybox {
-position: relative;
-	top:100px;
+  position: relative;
+  top: 100px;
   width: 80%;
   height: 1000px;
   margin: auto;
@@ -115,21 +114,21 @@ position: relative;
 }
 .el-header,
 .el-footer {
-  background-color: #b3c0d1;
+  background-color: #d3dce6;
   color: #333;
   text-align: center;
   line-height: 150px;
 }
 
 .el-aside {
-  background-color: #d3dce6;
+  background-color: #fffacd;
   color: #333;
   text-align: center;
   line-height: 200px;
 }
 
 .el-main {
-  background-color: #e9eef3;
+  background-color: #eeeeee;
   color: #333;
   text-align: center;
   line-height: 160px;
@@ -230,5 +229,8 @@ position: relative;
 		left: 0;
 		top: 0; */
   float: left;
+}
+.el-menu {
+  background-color: #fffacd;
 }
 </style>

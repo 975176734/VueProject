@@ -12,10 +12,14 @@
 import SearchBar from "../components/SearchBar.vue"
 import BaseLink from "@/components/BaseLink.vue"
 export default {
+<<<<<<< HEAD
 	components:{
 		BaseLink
 	}
 
+=======
+    components:{SearchBar}
+>>>>>>> 6707dedbcdfd8a6843ef69332f5fde7ce0df0e5e
 }
 </script>
 
