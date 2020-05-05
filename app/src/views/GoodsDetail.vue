@@ -11,7 +11,6 @@
 				<RelatedImages :mydata="message" :title='title'></RelatedImages>
 			</div>
 			
-		<BaseLink></BaseLink>
 	</div>
 </template>
 
@@ -19,7 +18,6 @@
 <script>
 	import RelatedImages from "../components/RelatedImages.vue"
 	import myGoodShow from './GoodsDetail/GoodsDetail.vue'
-	import BaseLink from "@/components/BaseLink.vue"
 	export default {	
 		data() {
 			return {
@@ -32,7 +30,6 @@
 		components:{
 			RelatedImages,
 			myGoodShow,
-			BaseLink
 			
 		},
 		created() {
