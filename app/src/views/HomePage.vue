@@ -7,12 +7,14 @@
     <AdvertisingCenter></AdvertisingCenter>
     <DynamicComponents></DynamicComponents>
     <KeepsLoading></KeepsLoading>
+	<BaseLink></BaseLink>
   </div>
 </template>
 
 
 <script>
 import SearchBar from '@/components/SearchBar.vue'
+import BaseLink from "@/components/BaseLink.vue"
 export default {
   name: "HomePage",
   components: {
@@ -21,6 +23,7 @@ export default {
     AdvertisingCenter: () => import("@/components/AdvertisingCenter.vue"),
     KeepsLoading: () => import("@/components/KeepsLoading/KeepsLoading.vue"),
     DynamicComponents: () =>import("@/components/DynamicComponents/DynamicComponents.vue"),
+	BaseLink
   },
   
 };

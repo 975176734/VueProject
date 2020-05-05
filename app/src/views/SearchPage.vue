@@ -41,6 +41,8 @@
     </div>
     <!-- 搜索图片显示 -->
     <!-- <RelatedImages :mydata='items' :title='title'></RelatedImages> -->
+	
+	<BaseLink></BaseLink>
   </div>
 </template>
 
@@ -48,9 +50,10 @@
 <script>
 // import RelatedImages from '../components/RelatedImages.vue'
 import AddToCar from "../components/AddToCar.vue";
+import BaseLink from "@/components/BaseLink.vue"
 export default {
   name: "SearchBar",
-  components: { AddToCar },
+  components: { AddToCar,BaseLink },
   data() {
     return {
       input1: "",
