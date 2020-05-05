@@ -1,12 +1,16 @@
 <template>
-	<div>我是收藏组件</div>
+	<div><ShoppingCar></ShoppingCar></div>
 </template>
 	
 <script>
+import ShoppingCar from "../../components/ShoppingCar.vue";
 	export default{
-		
+		components:{ShoppingCar}
 	}
 </script>
 
-<style>
+<style scoped>
+	*{
+		line-height:16px
+	}
 </style>
