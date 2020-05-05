@@ -22,8 +22,14 @@ let ModuleA={
 		
 	}
 }
+//张献喆的仓库
+let ModuleB={
+	//this.$store.state.b.updata_detail
+	updata_detail:{src:''}
+}
 export default new Vuex.Store({
 	modules: {
-		a:ModuleA
+		a:ModuleA,
+		b:ModuleB
 	}
 })
