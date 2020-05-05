@@ -8,7 +8,7 @@
 			
 			<!-- 相似图片展示 -->
 			<div>
-				<RelatedImages :mydata="similarMessage" :title='title'></RelatedImages>
+				<RelatedImages :mydata="message" :title='title'></RelatedImages>
 			</div>
 			
 		
@@ -22,16 +22,10 @@
 	export default {	
 		data() {
 			return {
-<<<<<<< HEAD
 				species: '',
 				message:'',
 				title:{exhibition:true,text:'相似图片'},
 				goodsInfo:'',
-=======
-				goodsObj: '',
-				similarMessage:'',
-				title:{exhibition:true,text:'相似图片'}
->>>>>>> 3712c0af6fbd746a3591ff70c47ddb20d3bdc184
 			}
 		},
 		components:{
@@ -42,7 +36,6 @@
 		created() {
 			
 			//获取点击商品的信息
-<<<<<<< HEAD
 			
 				let goodsObj = this.$route.query.message
 				let a = JSON.parse(goodsObj)
@@ -63,14 +56,6 @@
 					})
 				}
 			
-=======
-			this.goodsObj = this.$route.query.message
-					console.log(this.goodsObj,"000")
-			this.axios(`http://127.0.0.1:7001/SimilarImg?species=${this.goodsObj.species}`)
-				.then((results) => {
-					this.similarMessage = results.data
-					console.log(results.data,"222")
->>>>>>> 3712c0af6fbd746a3591ff70c47ddb20d3bdc184
 			
 		
 		}
