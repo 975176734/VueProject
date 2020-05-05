@@ -6,7 +6,7 @@
 			<h2 >商品详情页</h2>
 			<!-- 相似图片展示 -->
 			<div>
-				<RelatedImages :mydata="message" :title='title'></RelatedImages>
+				<RelatedImages :mydata="similarMessage" :title='title'></RelatedImages>
 			</div>
 			
 		
@@ -19,8 +19,8 @@
 	export default {	
 		data() {
 			return {
-				species: '',
-				message:'',
+				goodsObj: '',
+				similarMessage:'',
 				title:{exhibition:true,text:'相似图片'}
 			}
 		},
@@ -30,13 +30,12 @@
 		},
 		mounted() {
 			//获取点击商品的信息
-			let goodsObj = this.$route.query.message
-			
-			this.species = goodsObj.species
-			this.axios(`http://127.0.0.1:7001/SimilarImg?species=${this.species}`)
+			this.goodsObj = this.$route.query.message
+					console.log(this.goodsObj,"000")
+			this.axios(`http://127.0.0.1:7001/SimilarImg?species=${this.goodsObj.species}`)
 				.then((results) => {
-					this.message = results.data
-					
+					this.similarMessage = results.data
+					console.log(results.data,"222")
 			
 				})
 			},

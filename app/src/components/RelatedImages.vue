@@ -47,6 +47,13 @@ import AddToCar from "./AddToCar.vue"
 		flex-wrap: wrap;
 
 	}
+	.list:after{
+			content:' ';
+			width: 322px; 
+			height:0px;
+			display:block;
+		}
+
 	.list-item {
 		width: 322px;
 		position: relative;

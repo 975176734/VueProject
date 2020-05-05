@@ -1,7 +1,8 @@
 <template>
 	<div class="AdvertisingCenter">
 		<!-- 打开首页，页面中央弹出广告组件 -->
-		<div tabindex="-1" role="dialog" aria-modal="true" aria-label="HTML 片段" class="el-message-box__wrapper" style="z-index: 2001;">
+		<div tabindex="-1" role="dialog" aria-modal="true" aria-label="HTML 片段" class="el-message-box__wrapper" style="z-index: 2001;"
+		 :class="{clickStyle:1==choosedMovie}">
 			<div class="el-message-box__header">
 				<button type="button" aria-label="Close" class="el-message-box__headerbtn">
 					<i class="el-message-box__close el-icon-close" @click="close()"></i>
@@ -13,11 +14,16 @@
 
 <script>
 	export default {
+		data() {
+			return {
+				choosedMovie: -1
+			}
+		},
 		methods: {
 			close() {
-				document.querySelector(".el-message-box__wrapper").style.display = "none"
+				this.choosedMovie = 1
 			}
-		}
+		},
 	}
 </script>
 <style scoped="scoped">
@@ -28,5 +34,9 @@
 		background-color: #FAEBD7;
 		line-height: 260px;
 		background-image: url(https://static.paixin.com/paixin-vision/static/img/banner1.4997457.png);
+	}
+
+	.clickStyle {
+		display: none;
 	}
 </style>

@@ -2,10 +2,10 @@
 	<!-- 首页的"精选灵感", "图片灵感", "插画灵感", "视频灵感"四个组件动态切换 -->
 	<div class="DynamicInspiration">
 		<div class="category-options" >
-			<div class="category-option" @click="fn1">{{categoryArr[0]}}</div>
-			<div class="category-option" @click="fn2">{{categoryArr[1]}}</div>
-			<div class="category-option" @click="fn3">{{categoryArr[2]}}</div>
-			<div class="category-option" @click="fn4">{{categoryArr[3]}}</div>					 
+			<div class="category-option" @click="fn1" :class="{clickStyle:1==choosedMovie}">{{categoryArr[0]}}</div>
+			<div class="category-option" @click="fn2" :class="{clickStyle:2==choosedMovie}">{{categoryArr[1]}}</div>
+			<div class="category-option" @click="fn3" :class="{clickStyle:3==choosedMovie}">{{categoryArr[2]}}</div>
+			<div class="category-option" @click="fn4" :class="{clickStyle:4==choosedMovie}">{{categoryArr[3]}}</div>					 
 		</div>
 		<div>
 			<components :is="afflatus"></components>
@@ -24,20 +24,25 @@
 			return {
 				categoryArr: ["精选灵感", "图片灵感", "插画灵感", "视频灵感"],
 				afflatus:Select,
+				choosedMovie:1
 			}
 		},
 		methods:{
 			fn1(){
 				this.afflatus=Select;
+				this.choosedMovie=1
 			},
 			fn2(){
 				this.afflatus=Picture;
+				this.choosedMovie=2
 			},
 			fn3(){
 				this.afflatus=Illustration;
+				this.choosedMovie=3
 			},
 			fn4(){
 				this.afflatus=Video;
+				this.choosedMovie=4
 			}
 			
 		},
@@ -69,6 +74,9 @@
 		color: #333333;
 		font-weight: 600;
 		
+	}
+	.clickStyle {
+		color: red;
 	}
 	.category-option {
 		cursor: pointer;
