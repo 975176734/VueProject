@@ -17,4 +17,5 @@ module.exports = app => {
   router.get('/getMedia', controller.video.getMedia);
   router.get('/getlunbopic', controller.home.getlunbopic);
   router.post('/changePW', controller.mycenter.changePW);
+  router.get('/getimg', controller.getimg.getimg);
 };

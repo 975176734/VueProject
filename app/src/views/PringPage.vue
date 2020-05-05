@@ -3,7 +3,7 @@
     <div>
         我是图片页
         <SearchBar></SearchBar>
-        
+        <router-view></router-view>
     </div>
 </template>
 

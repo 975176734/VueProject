@@ -8,7 +8,7 @@
 			
 			<!-- 相似图片展示 -->
 			<div>
-				<RelatedImages :mydata="similarMessage" :title='title'></RelatedImages>
+				<RelatedImages :mydata="message" :title='title'></RelatedImages>
 			</div>
 			
 		
@@ -23,14 +23,18 @@
 		data() {
 			return {
 
+
+
 				species: '',
 				message:'',
 				title:{exhibition:true,text:'相似图片'},
 				goodsInfo:'',
 
+
 				goodsObj: '',
 				similarMessage:'',
 				title:{exhibition:true,text:'相似图片'}
+
 
 			}
 		},
@@ -62,6 +66,10 @@
 					})
 				}
 			
+
+			
+		
+
 		}
 		
 </script>

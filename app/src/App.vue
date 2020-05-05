@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+	  <!-- 顶部导航栏 -->
     <TopNav></TopNav>
     <router-view></router-view>
     <LogAndReg></LogAndReg>
