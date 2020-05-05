@@ -16,12 +16,12 @@
           <el-checkbox v-model="item.isSelected"></el-checkbox>
         </el-col>
         <el-col :span="12">
-          <el-col :span="7">
+          <el-col :span="7" :offset="3">
             <a href="#">
               <img :src="item.src" alt />
             </a>
           </el-col>
-          <el-col :span="4">
+          <el-col :span="4" :offset="2">
             <a href="#">{{item.name}}</a>
           </el-col>
         </el-col>
@@ -229,7 +229,7 @@ export default {
   margin-bottom: 20px;
 }
 img {
-  width: 150px;
+  width: 130px;
   height: 100px;
 }
 a {
@@ -245,7 +245,7 @@ a:hover {
 .emptyCar {
   text-align: right;
   background: url(../assets/emptyCar.jpg) no-repeat;
-  width: 80%;
+  width: 100%;
   height: 1000px;
 }
 .info {

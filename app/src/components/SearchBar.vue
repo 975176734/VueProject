@@ -1,6 +1,6 @@
 <template>
   <!-- 搜索栏模块 -->
-  <div style="margin-top: 50px;" class="searchModel">
+  <div class="searchModel">
   <el-input placeholder="输入关键字进行搜索" v-model="input1" class="input-with-select" style="width:500px">
     <el-select v-model="select" slot="prepend" placeholder="请选择类别" style="width:130px;color:black;font-size:16px">
       <el-option label="图片" value="picture"></el-option>
@@ -40,8 +40,11 @@ export default {
 
 <style scoped>
 .searchModel{
+  top:80px;
   margin: 0 auto;
+  margin-bottom: 50px;
   padding: 1px;
   width: 500px;
+  position: relative;
 }
 </style>

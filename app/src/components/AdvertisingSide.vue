@@ -1,7 +1,7 @@
 <template>
 	<div class="AdvertisingSide">
-		<!-- 侧边悬停广告，点击“X”关闭，关闭后1分钟自动弹出-->
-		<div role="alert" class="el-notification right" style="top: 16px; z-index: 2002;">
+		<!-- 侧边悬停广告，点击“X”关闭-->
+		<div role="alert" class="el-notification right" style="top: 16px; z-index: 2002;" :class="{clickStyle:1==choosedMovie}">
 			<!---->
 			<div class="el-notification__group">
 				<div class="el-notification__closeBtn el-icon-close" @click="close()"></div>
@@ -14,16 +14,19 @@
 <script>
 	
 	export default {
-		methods: {
-			close() {
-				document.querySelector(".el-notification").style.display="none"
+		data(){
+			return{
+				choosedMovie:-1
 			}
 		},
-		mounted() {
-			setInterval(function(){
-				document.querySelector(".el-notification").style.display="inline-block"
-			},60000)
-		}
+		methods: {
+			close() {
+				this.choosedMovie=1
+				
+			}
+			
+		},
+		
 	}
 </script>
 <style scoped="scoped">
@@ -36,5 +39,8 @@
 		border: 1px solid transparent;
 		box-shadow: 0 0px 0px 0 transparent;
 		margin-top: 145px;
+	}
+	.clickStyle{
+		display: none;
 	}
 </style>

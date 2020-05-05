@@ -3,7 +3,7 @@
   <div>
     <el-button type="text" @click="dialogFormVisible = true" v-if="!isLogin" class="user">登录/注册</el-button>
     <div v-if="isLogin" class="user">
-      <router-link to="/stock">个人中心</router-link>
+      <router-link to="/mycenter">个人中心</router-link>
       <el-button type="text" @click="LoginOut">退出</el-button>
     </div>
     <el-dialog :title="LogOrReg" :visible.sync="dialogFormVisible" @closed="resetForm('ruleForm')">
