@@ -11,7 +11,6 @@
 				<RelatedImages :mydata="message" :title='title'></RelatedImages>
 			</div>
 			
-		
 	</div>
 </template>
 
@@ -40,7 +39,7 @@
 		},
 		components:{
 			RelatedImages,
-			myGoodShow
+			myGoodShow,
 			
 		},
 		created() {
