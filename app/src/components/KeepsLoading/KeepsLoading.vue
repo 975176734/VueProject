@@ -66,6 +66,7 @@
 </script>
 
 <style scoped="scoped">
+	
 	.DynamicInspiration {
 		padding: 1px 0;
 	}

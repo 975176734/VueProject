@@ -1,10 +1,12 @@
 <template>
 <!-- 轮播图 -->
+<div class="mybox">
   <el-carousel :interval="4000" type="card" height="200px">
     <el-carousel-item v-for="(item,index) in lunbo_arr" :key="index">
       <h3 class="medium"><img :src="item.src" class="lunbo_pic"></h3>
     </el-carousel-item>
   </el-carousel>
+  </div>
 </template>
 
 
@@ -18,7 +20,7 @@ export default {
     created(){
 		let that =this;
 		console.log(66)
-        this.$axios.get('http://localhost:7001/getlunbopic').then(function(response){
+        this.axios.get('http://localhost:7001/getlunbopic').then(function(response){
 			console.log(response)
 			that.lunbo_arr = [...response.data]
 		})
@@ -26,6 +28,14 @@ export default {
 }
 </script>
 <style>
+	.mybox{
+		width: 60%;
+		height: 300px;
+		margin:  auto;
+		margin-top:-500px ;
+		position: relative;
+		top: -248px;
+	}
   .el-carousel__item h3 {
     color: #475669;
     font-size: 14px;

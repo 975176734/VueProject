@@ -50,6 +50,12 @@ import AddToCar from "../AddToCar.vue"
 <style scoped="scoped">
 	.ShopPopular {
 		width: 1330px;
+		position: relative;
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
 	}
 
 	.list {

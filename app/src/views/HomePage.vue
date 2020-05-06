@@ -3,6 +3,8 @@
   <div>
     我是主页 
     <SearchBar></SearchBar>
+	<VideoPic></VideoPic>
+	<Lunbo></Lunbo>
     <AdvertisingSide></AdvertisingSide>
     <AdvertisingCenter></AdvertisingCenter>
     <DynamicComponents></DynamicComponents>
@@ -21,6 +23,8 @@ export default {
     AdvertisingCenter: () => import("@/components/AdvertisingCenter.vue"),
     KeepsLoading: () => import("@/components/KeepsLoading/KeepsLoading.vue"),
     DynamicComponents: () =>import("@/components/DynamicComponents/DynamicComponents.vue"),
+	Lunbo:()=>import("./HomePage/lunbo.vue"),
+	VideoPic:()=>import('./HomePage/BackgroundMedia.vue')
   },
   
 };
