@@ -1,26 +1,27 @@
 <template>
-<!-- 图片页 -->
-    <div>
-        我是图片页
-        <SearchBar></SearchBar>
-<<<<<<< HEAD
-        <router-view></router-view>
-=======
->>>>>>> c0763c4d54bd66322b98026411e8b9222b8aa39a
-    </div>
+  <!-- 图片页 -->
+  <div>
+    我是图片页
+    <SearchBar></SearchBar>
+    <PictureAtlas></PictureAtlas>
+    <SwitchPicture></SwitchPicture>
+  </div>
 </template>
 
 
 <script>
-import SearchBar from "../components/SearchBar.vue"
+import SearchBar from "../components/SearchBar.vue";
+import PictureAtlas from "../components/PictureAtlas.vue"
+import SwitchPicture from "./PringPage/SwitchPicture.vue"
 export default {
-	components:{
-        SearchBar,
-	}
-
-}
+  components: {
+    SearchBar,
+    PictureAtlas,
+    SwitchPicture
+  },
+};
 </script>
 
-<style scope="scope">
-    
+<style scoped>
+
 </style>

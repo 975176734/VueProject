@@ -23,55 +23,55 @@
 			return {
 				mydata: [{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "凉凉夏日",
 						bag:"https://q-extra.paixin.com/admin/1582257595180.png?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "夏日时光-视频",
 						bag:"https://images.gaga.me/images/2019/0806/a9b5d48ddf5d1a98.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "夏日-矢量",
 						bag:"https://images.gaga.me/images/2019/0709/a505d2463ead20ee.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "母亲节",
 						bag:"https://images.gaga.me/images/2019/0723/a385d366d66bb907.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "中国武汉",
 						bag:"https://images.gaga.me/images/2019/0726/d075d3ab60755cb9.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "重返校园",
 						bag:"https://images.gaga.me/images/2019/0726/45f5d3ab5b931e89.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "运动健身",
 						bag:"https://images.gaga.me/images/2019/0726/a785d3ab47aa84a3.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "合家欢-视频",
 						bag:"https://images.gaga.me/images/2019/0726/28c5d3ab527eab6a.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/video.png",
-						type: "图片",
+						type: "视频",
 						describe: "2.5D商务插画",
 						bag:"https://images.gaga.me/images/2019/0709/f8c5d2465b15d202.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					}

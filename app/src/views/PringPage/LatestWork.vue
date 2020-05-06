@@ -1,11 +1,12 @@
 <template>
 	<div class="ShopPopular">
 		<!-- 商店热门组件 -->
-		<div v-show="title.exhibition" class="mytitle">{{title.text}}</div>
 		<div class="infinite-list-wrapper" style="overflow:auto">
-			<div class="list" >
+			<div class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled">
 				<div v-for="(item,index) in mydata" class="list-item" :key="index">
-						<img :src="item.src" @click="fn1(item)">
+					<router-link :to="{name:'GoodsDetail', query:{ message:item}}">
+						<img :src="item.src" >
+					</router-link>
 					<AddToCar :id="item.id" :type="item.type"></AddToCar>
 				</div>
 			</div>
@@ -14,20 +15,15 @@
 </template>
 
 <script>
-import AddToCar from "./AddToCar.vue"
+import AddToCar from "../../components/AddToCar.vue"
 	export default {
 		data() {
 			return {
-				
+				count: 28,
+				loading: false
 			}
 		},
-		props:['mydata',"title"],
-		methods: {
-			fn1(item){
-				this.$emit("change",item)
-			}
-		},
-		
+		props:['mydata'],
 		components:{AddToCar}
 	}
 </script>
@@ -35,31 +31,19 @@ import AddToCar from "./AddToCar.vue"
 <style scoped="scoped">
 	.ShopPopular {
 		width: 1330px;
-		margin: 50px auto 100px;
 	}
-	.mytitle {
-		height: 60px;
-		width: 100%;
-		line-height: 60px;
-		font-size: 22px;
-	}
+
 	.list {
 		width: 100%;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-wrap: wrap;
 
 	}
-	.list:after{
-			content:' ';
-			width: 322px; 
-			height:0px;
-			display:block;
-		}
-
 	.list-item {
 		width: 322px;
 		position: relative;
+		margin-bottom: 15px;
 	}
 	img {
 		width: 100%;

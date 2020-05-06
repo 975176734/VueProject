@@ -3,7 +3,7 @@
 	<div class="vido">
 		<video class="video" @mouseover="videoPlayback" @mouseout="videoStopped" width="340px" height="190px">
 			<source type="audio/mp4" :src="my_src">
-			</source>
+			
 		</video>
 	</div>
 </template>
