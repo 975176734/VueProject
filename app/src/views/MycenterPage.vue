@@ -50,8 +50,6 @@
         </el-container>
       </el-container>
     </el-container>
-	
-	<BaseLink></BaseLink>
   </div>
 </template>
 
@@ -59,7 +57,6 @@
 <script>
 import Mygoods from "./MycenterPage/Mygoods.vue";
 import ChangePw from "./MycenterPage/ChangePw.vue";
-import BaseLink from "@/components/BaseLink.vue"
 export default {
   data() {
     return {
@@ -89,7 +86,6 @@ export default {
   components: {
     Mygoods,
     ChangePw,
-	BaseLink
   }
 };
 </script>

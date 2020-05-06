@@ -53,10 +53,10 @@
 				</div>
 			</div>
 			<div class="index__gongshang">
-				© 2017 江苏拍信文化创意有限公司 All Rights Reserved 
-				<a href="#">苏ICP备14057276号-1 </a>
+				个人学习制作网站,不作任何商业用途
+				<a href="#"> 图片来自拍信网</a>
 				&nbsp;&nbsp;|&nbsp; 
-				<a href="">增值电信业务经营许可证 苏B2-20190018</a>
+				<a href="">图片来自拍信网</a>
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <template>
 <!-- 7KM -->
     <div class="items_box">
-        <span v-for="(items,index) in arr" :key="index">{{items.name}}</span>
+        <span v-for="(items,index) in arr" :key="index" @click=fn(items.name)>{{items.name}}</span>
     </div>
 </template>
 
@@ -9,9 +9,14 @@
 export default {
     data() {
         return {
-            arr:[{name:"医疗"},{name:"教育"},{name:"情感"},{name:"动物"},{name:"人物"},{name:"设计"},{name:"宗教"},{name:"工艺/技术"},{name:"色彩"}]
+            arr:[{name:"北京"},{name:"上海"},{name:"成都"},{name:"重庆"},{name:"樱之物语"},{name:"自然风光"},{name:"美食"},{name:"创意"},{name:"科技"}]
         }
     },
+	methods:{
+		fn(arg){
+			this.$emit("maoshen",arg)
+		}
+	}
 }
 </script>
 

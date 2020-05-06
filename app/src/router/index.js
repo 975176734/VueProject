@@ -15,8 +15,16 @@ Vue.use(ElementUI)
   {
     path: '/stock',
     name: 'Print',
-    component:()=>import('@/views/PringPage.vue')
+    component:()=>import('@/views/PringPage.vue'),
+	
+	children:[{
+		path:'pic_design/:mysrcname',
+		name:'pic_design1',
+		component:()=>import('@/views/pic_design.vue')
+	}]
+		
   },
+  
   {
     path: '/plus',
     name: 'Higher',
@@ -44,14 +52,15 @@ Vue.use(ElementUI)
   	  
   	  beforeEnter:(to,from,next) =>{
   		  console.log(window.localStorage)
-  		  if(to.path == '/mycenter'&& window.localStorage.length==2){
+  		  if(to.path == '/mycenter'&& window.localStorage.userName){
   			  next()
   		  }else{
   			  alert("请先登录")
   			  next('/Home')
   		  }
   	  }
-  }
+  },
+  
 ]
 
 const router = new VueRouter({

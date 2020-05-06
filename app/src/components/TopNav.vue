@@ -18,9 +18,11 @@
                     </div>
                     </el-menu-item>
                     <!-- 二级菜单 -->
-                    <el-menu-item index="2-2"  style="width:350px; height:350px">
-                        <component :is="componentId"></component>
+					
+                   <el-menu-item :index="'/stock/pic_design/'+mysrcname"  style="width:350px; height:350px" >
+                        <component :is="componentId" @maoshen="fm"></component>
                     </el-menu-item>
+					
                 </el-submenu>
             </el-menu-item>
 
@@ -36,8 +38,8 @@
                     </div>
                 </el-menu-item>
                 <!-- 二级菜单 -->
-                <el-menu-item index="3-2" style="width:300px; height:350px">
-                    <component :is="componentId_two"></component>
+                <el-menu-item :index="'/stock/pic_design/'+mysrcname" style="width:300px; height:350px" >
+                    <component :is="componentId_two" @maoshen="fm"></component>
                 </el-menu-item>
             </el-submenu>
         </el-menu-item>
@@ -78,7 +80,8 @@ export default {
         componentId_two:'Higher_pic',
         arr_video:[{name:"运动"},{name:"教育"},{name:"动物"},{name:"人物"}],
         index_one:1,
-        index_two:0
+        index_two:0,
+		mysrcname:''
       };
     },
     methods: {
@@ -100,7 +103,12 @@ export default {
       },
       higher_two(){
           this.componentId_two='Tpg'
-      }
+      },
+	  fm(arg){
+		   this.mysrcname = arg
+		  // this.mysrcname="/stock/pic_design/"+arg
+		  console.log(this.mysrcname)
+	  }
 
     },
     components:{
@@ -108,7 +116,8 @@ export default {
         DesignMaterial:()=>import('./TopNav/DesignMaterial.vue'),
         Higher_pic:()=>import('./TopNav/Higher_pic.vue'),
         Tpg:()=>import('./TopNav/Tpg.vue'),
-    }
+    },
+	
   }
 </script>
 
