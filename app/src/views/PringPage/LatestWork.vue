@@ -4,7 +4,7 @@
 		<div class="infinite-list-wrapper" style="overflow:auto">
 			<div class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled">
 				<div v-for="(item,index) in mydata" class="list-item" :key="index">
-					<router-link :to="{name:'GoodsDetail', query:{ message:item}}">
+					<router-link :to="{name:'GoodsDetail', query:{ message:JSON.stringify(item)}}">
 						<img :src="item.src" >
 					</router-link>
 					<AddToCar :id="item.id" :type="item.type"></AddToCar>

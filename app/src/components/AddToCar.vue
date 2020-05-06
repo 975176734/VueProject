@@ -6,7 +6,7 @@ export default {
   name: "AddToCar",
   data() {
     return {
-      isClick: "el-icon-star-off"
+      isClick: "el-icon-star-off",
     };
   },
   props: ["id","type"],
@@ -57,5 +57,6 @@ i {
 }
 .el-icon-shopping-cart-1 {
   color: white;
+  cursor: pointer;
 }
 </style>
