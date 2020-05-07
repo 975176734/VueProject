@@ -67,8 +67,12 @@
 
 <style scoped>
 	
+	.KeepsLoading>div:last-child{
+		background: #F3F3F3;
+	}
 	.DynamicInspiration {
 		padding: 1px 0;
+		/* background: #F3F3F3; */
 	}
 
 	.category-options {
@@ -103,4 +107,5 @@
 	.category-option {
 		cursor: pointer;
 	}
+	
 </style>

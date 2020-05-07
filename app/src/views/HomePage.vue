@@ -2,8 +2,10 @@
   <!-- 首页 -->
   <div>
     <SearchBar></SearchBar>
-	<VideoPic></VideoPic>
-	<Lunbo></Lunbo>
+	<div style="position: relative;height:900px;width: 100%;" >
+		<VideoPic></VideoPic>
+		<Lunbo></Lunbo>
+	</div>
     <AdvertisingSide></AdvertisingSide>
     <AdvertisingCenter></AdvertisingCenter>
     <DynamicComponents></DynamicComponents>
@@ -29,6 +31,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped="scoped">
+	
 </style>
 

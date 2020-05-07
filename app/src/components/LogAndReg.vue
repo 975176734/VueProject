@@ -1,10 +1,12 @@
 <template>
   <!-- 登录注册模块 -->
   <div>
-    <el-button type="text" @click="dialogFormVisible = true" v-if="!isLogin" class="user">登录/注册</el-button>
+    <el-button type="text" @click="dialogFormVisible = true" v-if="!isLogin" class="user" style="font-weight: bold;
+  font-size:20px;color: red;">登录/注册</el-button>
     <div v-if="isLogin" class="user">
+	  
       <router-link to="/mycenter">个人中心</router-link>
-      <el-button type="text" @click="LoginOut">退出</el-button>
+      <el-button type="text" @click="LoginOut" style="color: red; font-weight: bold;font-size:20px;">退出</el-button>
     </div>
     <el-dialog :title="LogOrReg" :visible.sync="dialogFormVisible" @closed="resetForm('ruleForm')">
       <div v-if="Login">
@@ -169,8 +171,9 @@ export default {
 
 <style scoped>
 .user {
+
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 15px;
   z-index: 1000;
   color: burlywood;
@@ -180,8 +183,11 @@ export default {
   float: left;
 }
 a {
-  color: #409eff;
-  font-size: 14px;
+	color: red;
+  /* color: #409eff; */
+  /* font-size: 14px; */
+  font-weight: bold;
+  font-size:20px;
   padding: 10px;
   text-decoration-line: none;
 }

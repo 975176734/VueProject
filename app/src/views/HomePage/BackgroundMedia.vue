@@ -1,6 +1,7 @@
 <template><video id="v1" autoplay loop muted>
+<!-- 首页背景大视频 -->
     <source
-      src="http://d301.paixin.com/thumbs/1292828/91699508/api_thumb_600.mp4"
+      src="http://img.tukuppt.com/video_show/3664703/00/02/03/5b4f3c440b285.mp4"
       type="video/mp4"
     />
   </video>
