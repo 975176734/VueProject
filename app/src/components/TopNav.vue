@@ -1,7 +1,7 @@
 
 <template>
 <!-- 顶部导航栏 -->
-    <div style=" width: 40%;z-index:1000; margin: auto;" class="myrootbox">
+    <div style=" width: 100%;z-index:1000; margin: auto;" class="myrootbox">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
             <!-- 导航第一项 -->
             <el-menu-item index="/" >首页</el-menu-item>
@@ -65,6 +65,10 @@
   text-color="#fff"
   active-text-color="#ffd04b">
   </el-menu>
+	<el-row style="width: 20%;position: relative; top:-50px;left:1490px;">
+	  <el-button type="warning" round >拍性会员</el-button>
+	  <el-button type="danger" round>优惠价格</el-button>
+	</el-row>
     </div>
 </template>
 
