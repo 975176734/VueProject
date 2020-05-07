@@ -4,11 +4,11 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async register() {
-    var data = await this.service.register.register(this.ctx.query);
+    var data = await this.service.register.register(this.ctx.request.body);
     this.ctx.body = data
   }
   async login() {
-    var data = await this.service.login.login(this.ctx.query);
+    var data = await this.service.login.login(this.ctx.request.body);
     if (data=="") {
       this.ctx.body = { code: 4004,info: "用户名或密码错误"}
     } else {

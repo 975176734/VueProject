@@ -83,7 +83,7 @@
 	}
 </script>
 
-<style scoped="scoped">
+<style scoped>
 	.Video {
 		width: 1200px;
 		height: 520px;

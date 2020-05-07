@@ -1,11 +1,12 @@
 <template>
   <!-- 搜索组件 -->
+  <div class="searchPage">
   <div style="margin-top: 0px;" class="searchModel">
     <el-input
       placeholder="输入关键字进行搜索"
       v-model="input1"
       class="input-with-select"
-      style="width:100%;boder:none"
+      style="width:100%;boder:none;"
     >
       <el-select
         v-model="select"
@@ -23,18 +24,17 @@
         @click="search"
       ></el-button>
     </el-input>
-
     <!-- 搜索显示 -->
     <div class="picture" v-for="(item,index) in items" :key="index">
-      <a href="#" v-if="picture">
+      <router-link :to="{name:'GoodsDetail', query:{ message:JSON.stringify(item)}}" v-if="picture">
         <img :src="item.src" alt />
-      </a>
-      <a href="#" v-if="media">
+      </router-link>
+      <router-link :to="{name:'GoodsDetail', query:{ message:JSON.stringify(item)}}" v-if="media">
         <video :src="item.src" controls="controls"></video>
-      </a>
+      </router-link>
       <div>
-        <span class="item-name">{{item.name}}</span>
-        <span>关键词:{{item.keywords}}</span >
+        <span class="item-name" style="color:#5F9F9F">{{item.name}}</span>
+        <span style="color:#FF7F00">关键词:{{item.keywords}}</span >
         <span class="item-price">&yen;{{item.price}}</span >
       </div>
       <AddToCar :id="item.id" :type="item.type"></AddToCar>
@@ -42,7 +42,7 @@
     <!-- 搜索图片显示 -->
     <!-- <RelatedImages :mydata='items' :title='title'></RelatedImages> -->
 	
-  </div>
+  </div></div>
 </template>
 
 
@@ -67,6 +67,9 @@ export default {
     this.input1 = this.$route.params.keywords;
     this.select = this.$route.params.type;
     this.search();
+    if(this.$route.query.keywords){
+       this.search2()
+    }
   },
   methods: {
     search() {
@@ -92,12 +95,28 @@ export default {
             this.items = res.data;
           });
       }
-    }
+    },
+    search2(){
+      this.select="picture";
+      this.input1=this.$route.query.keywords
+    this.axios
+          .get(
+            `http://127.0.0.1:7001/search?type=picture&keywords=${this.$route.query.keywords}`
+          )
+          .then(res => {
+            this.picture = true;
+            this.media = false;
+            this.items = res.data;
+          });
+  }
   }
 };
 </script>
 
 <style scoped>
+.searchPage{
+  background-color: #F1F4F7;
+}
 .searchModel {
   margin: 15px auto;
   width: 80%;

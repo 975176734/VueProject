@@ -82,7 +82,7 @@
 	}
 </script>
 
-<style scope="scope">
+<style scoped>
 	.BaseLink {
 		width: 100%;
 		margin: 0 auto;

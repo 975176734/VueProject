@@ -125,7 +125,7 @@ export default {
 <style scoped>
 .atlas {
   position: relative;
-  top: 100px;
+  top: 50px;
   margin-bottom: 250px;
 }
 .Picture {

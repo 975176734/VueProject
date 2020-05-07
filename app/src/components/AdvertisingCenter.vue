@@ -46,7 +46,7 @@ export default {
   }
 };
 </script>
-<style scoped="scoped">
+<style scoped>
 .el-message-box__wrapper {
   width: 600px;
   height: 260px;

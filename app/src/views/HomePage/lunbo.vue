@@ -27,7 +27,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 	.mybox{
 		width: 60%;
 		height: 300px;

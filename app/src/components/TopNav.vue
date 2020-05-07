@@ -1,7 +1,7 @@
 
 <template>
 <!-- 顶部导航栏 -->
-    <div style=" width: 40%;z-index:1000; margin: auto;" class="myrootbox">
+    <div style=" width: 100%;z-index:1000; margin: auto;" class="myrootbox">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
             <!-- 导航第一项 -->
             <el-menu-item index="/" >首页</el-menu-item>
@@ -65,6 +65,10 @@
   text-color="#fff"
   active-text-color="#ffd04b">
   </el-menu>
+	<el-row class="el-vip">
+	  <el-button type="warning" round>拍性会员</el-button>
+	</el-row>
+    <div class="LOGO">路上晴空</div>
     </div>
 </template>
 
@@ -122,7 +126,7 @@ export default {
 </script>
 
 
-<style scope="scope">
+<style scoped>
 	*{
 		margin: 0;
 	}
@@ -191,5 +195,17 @@ export default {
 	.el-menu-item:hover{
 		background: rgba(58,52,30,0.5);
 	}
-	
+	.el-vip{
+        position: absolute;
+        top:15px;
+        left: 80%;
+    }
+    .LOGO{
+        position: absolute;
+        top: 20px;
+        left: 200px;
+        font-size: 30px;
+        font-family: 华文行楷;
+        color: #0563CE;
+    }
 </style>

@@ -1,13 +1,12 @@
 <template>
   <!-- 商品详情页 -->
   <div class="GoodsDetail" >
-    <h2>商品详情页</h2>
     <!-- 图片详情以及描述 -->
 
     <myGoodShow :mygoodsInfo="goodsInfo" ></myGoodShow>
 
     <!-- 相似图片展示 -->
-    <div>
+    <div class="detail-body">
       <RelatedImages :mydata="message" :title="title" @change="change"></RelatedImages>
     </div>
   </div>
@@ -62,9 +61,13 @@ export default {
 };
 </script>
 
-<style scope="scope">
+<style scoped>
 .GoodsDetail {
   position: relative;
   top: 70px;
+}
+.detail-body{
+  background-color: #F1F4F7;
+  margin: 10px;
 }
 </style>

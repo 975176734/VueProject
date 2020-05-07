@@ -1,7 +1,6 @@
 <template>
   <!-- 首页 -->
   <div>
-    我是主页 
     <SearchBar></SearchBar>
 	<VideoPic></VideoPic>
 	<Lunbo></Lunbo>
@@ -30,6 +29,6 @@ export default {
 };
 </script>
 
-<style scope="scope">
+<style scoped>
 </style>
 

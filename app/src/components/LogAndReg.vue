@@ -90,8 +90,8 @@ export default {
         this.$refs[formName].validate(valid => {
           if (valid) {
             this.axios
-              .get(
-                `http://127.0.0.1:7001/login?name=${this.ruleForm.name}&password=${this.ruleForm.password}`
+              .post(
+                `http://127.0.0.1:7001/login`,{name:`${this.ruleForm.name}`,password:`${this.ruleForm.password}`}
               )
               .then(res => {
                 if (res.data.code == 2000) {
@@ -116,8 +116,8 @@ export default {
         this.$refs[formName].validate(valid => {
           if (valid) {
             this.axios
-              .get(
-                `http://127.0.0.1:7001/Register?name=${this.ruleForm.name}&password=${this.ruleForm.password}`
+              .post(
+                `http://127.0.0.1:7001/Register`,{name:`${this.ruleForm.name}`,password:`${this.ruleForm.password}`}
               )
               .then(res => {
                 if (res.data.code == 2000) {
@@ -169,10 +169,12 @@ export default {
 
 <style scoped>
 .user {
-  position: fixed;
-  right: 0;
-  top: 0;
+  position: absolute;
+  right: 20px;
+  top: 15px;
   z-index: 1000;
+  color: burlywood;
+  line-height: 30px;
 }
 .btn-left {
   float: left;

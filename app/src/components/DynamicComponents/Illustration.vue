@@ -81,12 +81,21 @@
 	};
 </script>
 
+<<<<<<< HEAD
 <style scoped="scoped">
 	.Illustration {
 		width: 1200px;
 		height: 520px;
 		margin: 0 auto;
 	}
+=======
+<style scoped>
+.Illustration {
+  width: 1200px;
+  height: 520px;
+  margin: 0 auto;
+}
+>>>>>>> 75a2bedb4e65a6982cb3ff851e8a31229a46591d
 
 	.list {
 		width: 100%;

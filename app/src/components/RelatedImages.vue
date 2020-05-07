@@ -32,7 +32,7 @@ import AddToCar from "./AddToCar.vue"
 	}
 </script>
 
-<style scoped="scoped">
+<style scoped>
 	.ShopPopular {
 		width: 1330px;
 		margin: 50px auto 100px;

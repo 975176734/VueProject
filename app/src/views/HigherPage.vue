@@ -23,6 +23,6 @@ export default {
 }
 </script>
 
-<style scope="scope">
+<style scoped>
     
 </style>

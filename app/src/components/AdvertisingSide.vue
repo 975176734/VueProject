@@ -34,7 +34,7 @@ export default {
   }
 };
 </script>
-<style scoped="scoped">
+<style scoped>
 .el-notification {
   width: 219px;
   height: 218px;
