@@ -1,5 +1,5 @@
 <template>
-	<div class="ShopPopular">
+	<div class="ShopPopular" >
 		<!-- 商店热门组件 -->
 		<div class="infinite-list-wrapper" style="overflow:auto">
 			<div class="list" v-infinite-scroll="load" infinite-scroll-disabled="disabled">
@@ -50,6 +50,12 @@ import AddToCar from "../AddToCar.vue"
 <style scoped="scoped">
 	.ShopPopular {
 		width: 1330px;
+		position: relative;
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
 	}
 
 	.list {

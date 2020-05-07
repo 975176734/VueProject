@@ -17,12 +17,12 @@
         </el-col>
         <el-col :span="12">
           <el-col :span="7" :offset="3">
-            <a href="#">
+            <router-link :to="{name:'GoodsDetail', query:{ message:JSON.stringify(item)}}">
               <img :src="item.src" alt />
-            </a>
+            </router-link>
           </el-col>
           <el-col :span="4" :offset="2">
-            <a href="#">{{item.name}}</a>
+            <router-link :to="{name:'GoodsDetail', query:{ message:JSON.stringify(item)}}">{{item.name}}</router-link>
           </el-col>
         </el-col>
         <el-col :span="2">&yen;{{item.price}}</el-col>

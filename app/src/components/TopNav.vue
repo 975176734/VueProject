@@ -1,15 +1,15 @@
 
 <template>
 <!-- 顶部导航栏 -->
-    <div style="position: fixed; width: 100%;z-index:1000">
+    <div style=" width: 40%;z-index:1000; margin: auto;" class="myrootbox">
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" router>
             <!-- 导航第一项 -->
-            <el-menu-item index="/">首页</el-menu-item>
+            <el-menu-item index="/" >首页</el-menu-item>
 
             <!-- 导航第二项 -->
             <el-menu-item index="/stock">
                 <el-submenu index="2">
-                    <template slot="title">图片</template>
+                    <template slot="title" >图片</template>
                     <!-- 二级菜单 -->
                     <el-menu-item index="2-1">
                     <div>
@@ -29,7 +29,7 @@
         <!-- 导航第三项 -->
         <el-menu-item index="/plus">
             <el-submenu index="3">
-                <template slot="title">高端</template>
+                <template slot="title" >高端</template>
                 <!-- 二级菜单 -->
                 <el-menu-item index="3-1">
                     <div>
@@ -46,7 +46,7 @@
   
         <el-menu-item index="/stockvideo">
             <el-submenu index="4">
-                    <template slot="title">视频</template>
+                    <template slot="title" >视频</template>
                     <el-menu-item index="4-1" style="width：150px; height:150px">
                         <div class="video_items">
                             <span v-for="(items,index) in arr_video" :key="index">{{items.name}}</span>
@@ -172,4 +172,24 @@ export default {
 		left:0;
 		
 	}
+	.myrootbox{
+		opacity:0.5
+	}
+	.myrootbox ul{
+		width: 80%;
+		height: 100%;
+		margin: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content:space-around;
+		/* background: rgba(58,52,30,0.5); */
+	}
+	/* .el-submenu__title{
+		color: white;
+	} */
+	.el-menu-item:hover{
+		background: rgba(58,52,30,0.5);
+	}
+	
 </style>
