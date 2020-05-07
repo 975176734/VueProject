@@ -139,7 +139,7 @@ export default {
 };
 </script>
 
-<style scoped="scoped">
+<style scoped>
 * {
   margin: 0;
  /* padding:0 ; */
@@ -147,7 +147,7 @@ export default {
 .mybox {
   position: relative;
   top: 100px;
-  width: 60%;
+  width: 80%;
   height: 1400px;
   margin: auto;
   /* margin-top: 200px; */

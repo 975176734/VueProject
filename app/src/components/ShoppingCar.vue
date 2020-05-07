@@ -42,10 +42,10 @@
         </el-col>
       </el-row>
       <el-row class="car-footer">
-        <el-col :span="19">
+        <el-col :span="8">
           <el-button type="danger" circle @click="removeAll">删除选中商品</el-button>
         </el-col>
-        <el-col :span="3">总价:{{summary}}</el-col>
+        <el-col :span="14">总价:{{summary}}</el-col>
         <el-col :span="2">
           <el-button type="primary" round>去结算</el-button>
         </el-col>
@@ -251,5 +251,8 @@ a:hover {
 .info {
   margin-bottom: 30px;
   font-size: 26px;
+}
+.car-footer{
+  margin: 20px 10px;
 }
 </style>
