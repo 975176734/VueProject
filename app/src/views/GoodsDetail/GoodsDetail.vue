@@ -1,32 +1,57 @@
 <template>
   <div class="mybox">
-    <el-container>
-      <el-header>
-        <el-row>
-          <el-col :span="12">
-            <div class="grid-content bg-purple">{{goodsInfo.name}}</div>
+    <el-row>
+      <el-col :span="12">{{goodsInfo.name}}</el-col>
+      <el-col :span="12">
+        <div class="itemID">素材ID--{{goodsInfo.id}}</div>
+        <div class="item-other">
+          <span style="color:#9999B3;font-weight: 400;">该作品可用于</span> 个人/企业商业用途
+          <el-divider></el-divider>
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col :span="12">
+        <el-image style="width: 95%; height: 400px" :src="url" :preview-src-list="srcList"></el-image>
+      </el-col>
+      <el-col :span="12" class="switch">
+        <div
+          @click="choosed=1"
+          :class="{isClick:1==choosed}"
+          style="display: inline-block;
+  margin-right: 10px;
+      font-size: 18px;
+    font-weight: 500;
+    color: balck;
+    line-height: 25px;
+    display: inline-block;
+    cursor: pointer;"
+        >标准授权</div>
+        <el-row class="chossed1">
+          <el-col :span="8">
+            <el-radio v-model="radio" label="1" style="display:block;">大图</el-radio>
           </el-col>
-          <el-col :span="12">
-            <div class="grid-content bg-purple-light">该商品可用于个人用途/商家版权</div>
-          </el-col>
+          <el-col :span="8">7360 x 4912px / jpg</el-col>
+          <el-col :span="8" style="color:red">套餐价格：&yen;{{goodsInfo.price}}</el-col>
         </el-row>
-      </el-header>
-      <el-container>
-        <el-aside width="50%">
-          <!-- <img :src='goodsInfo.src'> -->
-          <!-- 图片展示 -->
-          <div class="demo-image__preview">
-            <el-image style="width: 100%; height: 300px" :src=goodsInfo.src></el-image>
-          </div>
-          <p class="left_items">图片描述:{{goodsInfo.describes}}</p>
-          <p class="left_items">关键字:{{goodsInfo.keywords}}</p>
-        </el-aside>
-        <el-main>
-          <p>价格:{{goodsInfo.price}}</p>
-          <button>点击购买</button>
-        </el-main>
-      </el-container>
-    </el-container>
+        <el-row class="chossed2">
+          <el-col :span="8">
+            <el-radio v-model="radio" label="2" style="display:block;">中图</el-radio>
+          </el-col>
+          <el-col :span="8">1000 x 667px / jpg</el-col>
+          <el-col :span="8" style="color:red">套餐价格：&yen;{{goodsInfo.price}}</el-col>
+        </el-row>
+        <el-row class="foot">
+          <el-col :span="18">
+            <div class="block">
+              <span class="demonstration">期待您的评价</span>
+              <el-rate v-model="value1"></el-rate>
+            </div>
+          </el-col>
+          <el-col :span="6"><el-button @click="addCar" type="primary">加入购物车</el-button></el-col>
+        </el-row>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -36,127 +61,90 @@ export default {
     return {
       goodsInfo: "",
       url: "",
-      srcList: ["", ""]
+      srcList: [""],
+      choosed: 1,
+      value1: null,
+      radio: "1",
     };
   },
   props: ["mygoodsInfo"],
   created() {
     // console.log(this.mygoodsInfo,666666)
     this.goodsInfo = this.mygoodsInfo; //父组件传值给子组件并绑定DATA
+    this.url = this.mygoodsInfo.src;
+    let arr = [];
+    arr.push(this.url);
+    this.srcList = arr;
   },
   watch: {
     mygoodsInfo: function(newVal, oldVal) {
       //不能用箭头函数
-	  this.goodsInfo = newVal;
+      this.goodsInfo = newVal;
+      this.url = this.goodsInfo.src;
+      let arr = [];
+      arr.push(this.url);
+      this.srcList = arr;
+      this.value1=null;
     }
-  }
+  },
+  methods: {
+    addCar(){
+      if (this.$store.state.a.isLogin) {
+          this.axios
+            .get(
+              `http://127.0.0.1:7001/AddToCar?itemID=${this.goodsInfo.id}&userName=${this.$store.state.a.userName}&type=${this.goodsInfo.type}`
+            )
+            .then(res => {
+              if (res.data.code == 2000) {
+                this.$message({
+                  message: res.data.info,
+                  type: "success"
+                });
+              }else if(res.data.code==4005){
+                   this.$message.error(res.data.info);
+              }
+      })
+      }else {
+        this.$message({
+          message: "请登录",
+          type: "warning"
+        });
+      }
+    }
+  },
 };
 </script>
 
-<style>
+<style scoped>
 .mybox {
-  width: 70%;
-  margin: auto;
+  width: 80%;
+  margin: 0 auto;
 }
-
-/*容器布局*/
-.el-header,
-.el-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
+.itemID {
+  font-weight: 600;
 }
-
-.el-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
+.item-other {
+  color: #333333;
+  font-weight: bolder;
 }
-
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
+.isClick {
+  color: red;
 }
-
-.el-container {
-  margin-bottom: 40px;
+.chossed1 {
   width: 100%;
-  height: 650px;
+  background-color: #f8f8f8;
+  padding: 50px;
+  margin: 15px auto;
 }
-
-.el-container:nth-child(5) .el-aside,
-.el-container:nth-child(6) .el-aside {
-  line-height: 260px;
-}
-
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
-}
-
-.el-row {
-  margin-bottom: 20px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-.el-col {
-  border-radius: 4px;
-}
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.bg-purple-light {
-  background: #e5e9f2;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
-}
-.left_items {
-  padding: 0;
+.chossed2 {
   width: 100%;
-  height: 40px;
+  background-color: #f8f8f8;
+  padding: 50px;
 }
-
-/*头部分栏*/
-.el-row {
-  margin-bottom: 20px;
-  &:last-child {
-    margin-bottom: 0;
-  }
+.el-radio__label {
+  font-size: 20px;
 }
-.el-col {
-  border-radius: 4px;
-}
-.bg-purple-dark {
-  background: #99a9bf;
-}
-.bg-purple {
-  background: #d3dce6;
-}
-.bg-purple-light {
-  background: #e5e9f2;
-}
-.grid-content {
-  border-radius: 4px;
-  min-height: 36px;
-}
-.row-bg {
-  padding: 10px 0;
-  background-color: #f9fafc;
-}
-.grid-content {
-  height: 60px;
+.foot{
+  margin: 20px;
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
   <!-- 图片页 -->
-  <div>
-    我是图片页
-    <SearchBar></SearchBar>
+  <div class="PringPage">
+    <div class="SearchBar"><SearchBar></SearchBar></div>
     <PictureAtlas></PictureAtlas>
     <SwitchPicture></SwitchPicture>
   </div>
@@ -10,7 +9,7 @@
 
 
 <script>
-import SearchBar from "../components/SearchBar.vue";
+import SearchBar from "./PringPage/SearchBar.vue";
 import PictureAtlas from "../components/PictureAtlas.vue"
 import SwitchPicture from "./PringPage/SwitchPicture.vue"
 export default {
@@ -23,5 +22,12 @@ export default {
 </script>
 
 <style scoped>
-
+  .PringPage{
+    background-color: #F1F4F7;
+  }
+  .SearchBar{
+    width: 100%;
+    height: 200px;
+    background-color: #434D65;
+  }
 </style>

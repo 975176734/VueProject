@@ -34,14 +34,14 @@ import AddToCar from "../../components/AddToCar.vue"
 	}
 
 	.list {
-		width: 100%;
+		width: 91%;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 
 	}
 	.list-item {
-		width: 322px;
+		width: 395px;
 		position: relative;
 		margin-bottom: 15px;
 	}

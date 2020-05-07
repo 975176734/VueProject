@@ -1,5 +1,5 @@
 <template>
-	<!-- 首页的"精选灵感", "图片灵感", "插画灵感", "视频灵感"四个组件动态切换 -->
+	<!-- 组件动态切换 -->
 	<div class="DynamicInspiration">
 		<div class="category-options" >
 			<div class="category-option" @click="fn1" :class="{clickStyle:1==choosedMovie}">{{categoryArr[0]}}</div>
