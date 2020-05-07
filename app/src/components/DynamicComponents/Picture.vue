@@ -84,7 +84,7 @@
 	}
 </script>
 
-<style scoped="scoped">
+<style scoped>
 	.Picture {
 		width: 1200px;
 		height: 520px;

@@ -170,8 +170,8 @@ export default {
 <style scoped>
 .user {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 20px;
+  top: 15px;
   z-index: 1000;
   color: burlywood;
   line-height: 30px;

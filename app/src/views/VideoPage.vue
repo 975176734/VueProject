@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style scope="scope">
+<style scoped>
     .vido{
 		margin-top: 10px;
 	}

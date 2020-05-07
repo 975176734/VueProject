@@ -28,7 +28,7 @@ import AddToCar from "../../components/AddToCar.vue"
 	}
 </script>
 
-<style scoped="scoped">
+<style scoped>
 	.ShopPopular {
 		width: 1330px;
 	}

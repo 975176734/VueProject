@@ -42,7 +42,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.vido{
 		margin-top: 30px;
 		display:inline-block

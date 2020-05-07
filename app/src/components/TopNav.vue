@@ -65,10 +65,10 @@
   text-color="#fff"
   active-text-color="#ffd04b">
   </el-menu>
-	<el-row style="width: 20%;position: relative; top:-50px;left:1490px;">
-	  <el-button type="warning" round >拍性会员</el-button>
-	  <el-button type="danger" round>优惠价格</el-button>
+	<el-row class="el-vip">
+	  <el-button type="warning" round>拍性会员</el-button>
 	</el-row>
+    <div class="LOGO">路上晴空</div>
     </div>
 </template>
 
@@ -126,7 +126,7 @@ export default {
 </script>
 
 
-<style scope="scope">
+<style scoped>
 	*{
 		margin: 0;
 	}
@@ -195,5 +195,17 @@ export default {
 	.el-menu-item:hover{
 		background: rgba(58,52,30,0.5);
 	}
-	
+	.el-vip{
+        position: absolute;
+        top:15px;
+        left: 80%;
+    }
+    .LOGO{
+        position: absolute;
+        top: 20px;
+        left: 200px;
+        font-size: 30px;
+        font-family: 华文行楷;
+        color: #0563CE;
+    }
 </style>

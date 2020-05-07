@@ -26,7 +26,7 @@ export default {
 </script>
 
 
-<style scope="scope">
+<style scoped>
     .items_box{
         width:100%;
         height:100%;

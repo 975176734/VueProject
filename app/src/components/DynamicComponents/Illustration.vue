@@ -95,7 +95,7 @@ export default {
 };
 </script>
 
-<style scoped="scoped">
+<style scoped>
 .Illustration {
   width: 1200px;
   height: 520px;
