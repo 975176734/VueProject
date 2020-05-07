@@ -4,14 +4,14 @@
 		<div class="list">
 
 			<div class="pic_item" v-for="(item,index) in mydata" :key="index" :style="{backgroundImage: 'url(' + item.bag + ')'}">
-				<a href="#">
+				<router-link :to="{name:'PictureShow', query:{ message:JSON.stringify(item.describe)}}">
 					<div class="tag">
 						<img src="../../assets/Picture.png">
 						<!-- <img :src="item.imgsrc"> -->
 						<span>{{item.type}}</span>
 					</div>
 					<div class="text">{{item.describe}}</div>
-				</a>
+				</router-link>
 			</div>
 		</div>
 	</div>

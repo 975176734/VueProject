@@ -46,6 +46,11 @@ Vue.use(ElementUI)
     component:()=>import('@/views/GoodsDetail.vue')
   },
   {
+    path: '/PictureShow',
+    name: 'PictureShow',
+    component:()=>import('@/views/PictureShow.vue')
+  },
+  {
   	  path:'/mycenter',
   	  name:'mycenter',
   	  component:()=>import('@/views/MycenterPage.vue'),
