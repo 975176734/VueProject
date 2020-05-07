@@ -82,11 +82,14 @@
 	}
 </script>
 
-<style scoped>
+<style scoped = "scoped">
 	.BaseLink {
+		/* position: relative; */
 		width: 100%;
 		margin: 0 auto;
 		padding-top: 32px;
+		/* position: absolute;
+		top:1800; */
 	}
 
 	.contact_title {

@@ -1,15 +1,16 @@
 <template>
   <!-- 个人中心页 -->
   <div class="mybox">
+	  
     <!-- <button @click="test">点击打印用户名</button> -->
 	<SearchBar></SearchBar>
     <el-container>
       <!-- 头像部分 -->
-      <el-header>
+      <el-header >
         <el-row :gutter="20">
           <el-col :span="2">
             <div class="grid-content bg-purple">
-              <span style="display: block; width:150px;height:100px;"><span>普通用户:</span>{{myid}}</span>
+              <span style="display: block; width:150px;height:100px;z-index: 99999;"><span>普通用户:</span>{{myid}}</span>
               <!-- 头像展示 -->
               <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" style="position: relative;top: -90px;left: 0;"></el-avatar>
             </div>
@@ -23,13 +24,9 @@
 			    <el-col :span="8">
 					<div class="grid-content bg-purple">
 						<el-row>
-						  <el-col :span="12">
-							  <div class="grid-content bg-purple">
-								  <img src="https://img.alicdn.com/simba/img/TB1yGLCe.WF3KVjSZPhSutclXXa.jpg" style="height: 100%;width:100%;">
-							  </div>
-							  </el-col>
+					
 							  <!-- 日历部分 -->
-						  <el-col :span="12">
+						  <el-col :span="24">
 							  <div class="grid-content bg-purple-light">
 								  <div style="width: 100%;height: 30%; background: #6EC884;line-height:60px;font-size: 30px;color: white;font-weight:bold;">日历</div>
 								  <div style="width: 100%;height: 70%;background: #F8FFFA;">{{gettime}}</div>
@@ -61,7 +58,7 @@
 
                 <el-menu-item index="4" @click="changePassword">
                   <i class="el-icon-setting"></i>
-                  <span slot="title">修改密码</span>
+                  <span slot="title">重置个人信息</span>
                 </el-menu-item>
               </el-menu>
             </el-col>
@@ -71,7 +68,7 @@
         <el-container>
           <el-main>
             <!-- 点击切换组件 -->
-            <component :is="subassembly"></component>
+            <component :is="subassembly" @change="getnewInfo"></component>
           </el-main>
           <!-- <el-footer>Footer</el-footer> -->
         </el-container>
@@ -124,7 +121,15 @@ export default {
 	},
 	currentTime(){
 	      setInterval(this.getTime,500)
-	    }
+	    },
+	getnewInfo(res){
+		console.log(res)
+		localStorage.userName = res
+	}
+  },
+  updated() {
+  	console.log(localStorage)
+	this.myid = localStorage.userName
   },
   components: {
     Mygoods,
@@ -134,15 +139,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped="scoped">
 * {
   margin: 0;
+ /* padding:0 ; */
 }
 .mybox {
   position: relative;
   top: 100px;
-  width: 80%;
-  height: 1300px;
+  width: 60%;
+  height: 1400px;
   margin: auto;
   /* margin-top: 200px; */
 }
@@ -287,5 +293,11 @@ export default {
 .searchModel{
 	position: relative;
 	top:0
+}
+
+
+.index__href_wrap{
+	position: relative;
+	top: 200px;
 }
 </style>

@@ -52,8 +52,8 @@
       </el-row>
     </div>
     <div class="emptyCar" v-if="!emptyCar">
-      <div class="info">购物车空空如也(⊙﹏⊙)</div>
-      <router-link to="/" style="color:red;font-size:26px">(>▽<)&nbsp;现在就去购物吧</router-link>
+      <div class="info" style="position: relative; top:460px;left:-600px;">购物车空空如也(⊙﹏⊙)</div>
+      <router-link to="/" style="color:red;font-size:26px;position: relative; top:520px;left:-615px;">(>▽<)&nbsp;现在就去购物吧</router-link>
     </div>
   </div>
 </template>
@@ -222,7 +222,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped = "scoped">
 .car-head {
   padding-bottom: 20px;
   border-bottom: 1px solid gray;

@@ -9,7 +9,7 @@ import ShoppingCar from "../../components/ShoppingCar.vue";
 	}
 </script>
 
-<style scoped>
+<style scoped="scoped">
 	*{
 		line-height:16px
 	}
