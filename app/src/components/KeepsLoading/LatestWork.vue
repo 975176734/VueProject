@@ -56,6 +56,7 @@ import AddToCar from "../AddToCar.vue"
 		right: 0;
 		bottom: 0;
 		top: 0;
+		background: #F3F3F3;
 	}
 
 	.list {

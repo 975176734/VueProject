@@ -13,6 +13,7 @@
     <el-row>
       <el-col :span="12">
         <el-image style="width: 95%; height: 400px" :src="url" :preview-src-list="srcList"></el-image>
+        <el-row><el-col :span="18">{{goodsInfo.describes}}</el-col> <el-col :span="4" style="color:red">关键词：{{goodsInfo.keywords}}</el-col></el-row>
       </el-col>
       <el-col :span="12" class="switch">
         <div

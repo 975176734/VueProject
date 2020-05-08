@@ -59,6 +59,7 @@
 <style scoped>
 	.DynamicInspiration {
 		padding: 1px 0;
+		background: #E9EBDB;
 	}
 
 	.category-options {

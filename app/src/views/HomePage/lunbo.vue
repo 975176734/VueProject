@@ -32,9 +32,12 @@ export default {
 		width: 60%;
 		height: 300px;
 		margin:  auto;
-		margin-top:-500px ;
-		position: relative;
-		top: -248px;
+		/* margin-top:-500px ; */
+		position: absolute;
+		top: 200px;
+		left: 50%;
+		margin-left: -30%;
+		
 	}
   .el-carousel__item h3 {
     color: #475669;

@@ -5,6 +5,7 @@
     <PictureAtlas></PictureAtlas>
     <SwitchPicture></SwitchPicture>
   </div>
+<<<<<<< HEAD
 
 </template>
 <script>
@@ -20,6 +21,20 @@
 		},
 	}
 
+=======
+</template>
+<script>
+import SearchBar from "./PringPage/SearchBar.vue";
+import PictureAtlas from "../components/PictureAtlas.vue"
+import SwitchPicture from "./PringPage/SwitchPicture.vue"
+export default {
+  components: {
+    SearchBar,
+    PictureAtlas,
+    SwitchPicture
+  },
+};
+>>>>>>> 3765312c794d8bc7fb7088682dce5b8f15efb5e3
 </script>
 
 <style scoped>
@@ -28,7 +43,7 @@
   }
   .SearchBar{
     width: 100%;
-    height: 200px;
+    height: 240px;
     background-color: #434D65;
   }
 </style>

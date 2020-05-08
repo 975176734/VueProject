@@ -40,6 +40,7 @@ export default {
 		margin-top: 10px;
 	}
 	.mybox{
+		width: 60%;
 		position: relative;
 		top: -230px;
 		display: flex;
