@@ -34,7 +34,7 @@
 				select: '',
 				mytype:'picture',
 				keywords:["古风建筑","风景","美食","樱之物语","狗","人物"],
-				mediaArr:["自然","延伸","航拍","水下摄影"]
+				mediaArr:["自然","延时","航拍","水下摄影"]
 			}
 		},
 		props:["mytype1"],

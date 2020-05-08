@@ -35,7 +35,7 @@
 		<div class="index__copybottom">
 			<div class="index__href_wrap">
 				<div class="index__about_left">
-					<h1>拍信创意</h1>
+					<h1>路上晴空</h1>
 					<p>中国领先的视觉版权内容平台</p>
 					<p>400-9613-900</p>
 				</div>
@@ -177,6 +177,7 @@
 	.index__about_left h1{
 		font-size: 50px;
 		font-weight: bolder;
+		font-family: "华文行楷";
 	}
 	.index__about_left p:nth-of-type(1){
 		font-size: 16px;
