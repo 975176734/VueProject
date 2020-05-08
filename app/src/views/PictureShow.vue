@@ -33,7 +33,7 @@
 	export default {
 		data() {
 			return {
-				ArrList: ["自然风景", "建筑", "鲜花", "人物情感", "动物"],
+				ArrList: ["自然风景", "建筑", "鲜花", "人物情感", "动物", "教育文化", "生活方式", "风景"],
 				mydata: '',
 				message: '',
 				count: ''

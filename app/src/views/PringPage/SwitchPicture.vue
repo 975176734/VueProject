@@ -42,7 +42,7 @@
 <style scoped>
 	.DynamicInspiration {
 		padding: 1px 0;
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 		
 	}

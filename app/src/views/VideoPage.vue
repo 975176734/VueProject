@@ -1,7 +1,7 @@
 <template>
 <!-- 视频页 -->
     <div>
-        <div class="searchBar"><SearchBar></SearchBar></div>
+        <div class="searchBar"><SearchBar :mytype1="media1"></SearchBar></div>
         <BackgroundMedia></BackgroundMedia>
 		<div class="mybox" style="width: 100%; height: 800px;">
 		<Videopic v-for="(item,index) in arr_video" :key="index" :my_src="item.src" :my_index="index"></Videopic>
@@ -22,7 +22,8 @@ export default {
         },
 		data() {
 			return {
-				arr_video:""
+				arr_video:"",
+				media1:"media"
 			}
 		},
 		created() {

@@ -3,7 +3,7 @@
   <div class="mybox">
 	  
     <!-- <button @click="test">点击打印用户名</button> -->
-	<SearchBar></SearchBar>
+	<!-- <SearchBar></SearchBar> -->
     <el-container>
       <!-- 头像部分 -->
       <el-header >

@@ -7,10 +7,7 @@
 		 <KeepsLoading></KeepsLoading>
     </div>
 </template>
-
-
-<script>
-	
+<script>	
 import HigherPageTop from"@/components/HigherPageTop.vue"
 import SearchBar from"@/components/SearchBar.vue"
 import KeepsLoading from"@/components/KeepsLoading/KeepsLoading.vue"

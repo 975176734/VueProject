@@ -47,7 +47,7 @@ export default {
     console.log(JSON.parse(goodsObj));
 
     //打包商品的信息
-    // console.log(goodsObj)
+    console.log(goodsObj)
     this.goodsInfo = a;
 
     //网络请求获取相似图片
