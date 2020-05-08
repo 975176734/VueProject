@@ -9,7 +9,7 @@
 export default {
     data() {
         return {
-            arr:[{name:"风景"},{name:"人物"},{name:"猫"},{name:"狗"},{name:"建筑"},{name:"居家"},{name:"美食"},{name:"科技"},{name:"活动"}]
+            arr:[{name:"自然风景"},{name:"人物情感"},{name:"餐饮美食"},{name:"室内家具"},{name:"建筑空间"},{name:"教育文化"},{name:"背景素材"},{name:"生活方式"},{name:"美容养生"}]
         }
     },
 	methods:{

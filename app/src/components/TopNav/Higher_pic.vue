@@ -9,7 +9,7 @@
 export default {
     data() {
         return {
-            arr:[{name:"北京"},{name:"上海"},{name:"成都"},{name:"重庆"},{name:"樱之物语"},{name:"自然风光"},{name:"美食"},{name:"创意"},{name:"科技"}]
+            arr:[{name:"抽象创意"},{name:"汽车交通"},{name:"电子科技"},{name:"动物"},{name:"风景"},{name:"鲜花"},{name:"城市"},{name:"背景素材"},{name:"教育文化"}]
         }
     },
 	methods:{
