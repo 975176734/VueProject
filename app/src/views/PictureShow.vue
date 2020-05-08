@@ -50,6 +50,7 @@
 				  results => {
 				    this.mydata = results.data;
 					this.count=results.data.length
+					this.message=parameter
 				  });
 			}
 		},

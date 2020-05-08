@@ -25,55 +25,55 @@
 				mydata: [{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "凉凉夏日",
+						describe: "动物",
 						bag:"https://q-extra.paixin.com/admin/1587634950040.png?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "夏日时光-视频",
+						describe: "鲜花",
 						bag:"https://q-extra.paixin.com/admin/1582249391367.png?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "夏日-矢量",
+						describe: "餐饮美食",
 						bag:"https://images.gaga.me/images/2019/0516/f555cdd23af20cb4.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "母亲节",
+						describe: "风景",
 						bag:"http://images.gaga.me/insets/2018/0510/c7b5af3a6b461f96.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "中国武汉",
+						describe: "室内家具",
 						bag:"http://images.gaga.me/images/2018/0206/e8e5a7917426d8e7.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "重返校园",
+						describe: "建筑空间",
 						bag:"https://images.gaga.me/images/2019/0628/a2c5d1578981902c.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "运动健身",
+						describe: "餐饮美食",
 						bag:"http://images.gaga.me/insets/2018/0810/10d5b6d597b72980.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "合家欢-视频",
+						describe: "鲜花",
 						bag:"http://images.gaga.me/insets/2018/1009/dbf5bbc47e21c9b8.jpeg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Picture.png",
 						type: "图片",
-						describe: "2.5D商务插画",
+						describe: "动物",
 						bag:"http://images.gaga.me/images/2018/0807/40e5b693a998fbb9.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					}
 				]

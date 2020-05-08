@@ -24,55 +24,55 @@
 				mydata: [{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "凉凉夏日",
+						describe: "鲜花",
 						bag: "https://images.gaga.me/images/2019/0408/fe15caae91901aab.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "夏日时光-视频",
+						describe: "餐饮美食",
 						bag: "https://images.gaga.me/images/2019/0806/8045d48dc95e18f9.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "夏日-矢量",
+						describe: "建筑空间",
 						bag: "http://res.gaga.me/upload/images/2017/0922/41859c4b207e3d35.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "母亲节",
+						describe: "自然风景",
 						bag: "http://res.gaga.me/upload/images/2017/1020/06a59e96c48cc5a7.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "中国武汉",
+						describe: "动物",
 						bag: "http://res.gaga.me/upload/images/2017/0922/65359c4b2363bd9d.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "重返校园",
+						describe: "风景",
 						bag: "http://res.gaga.me/upload/images/2017/0922/49359c4b42787756.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "运动健身",
+						describe: "城市",
 						bag: "http://images.gaga.me/images/2018/1116/f435bee37d803aba.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "合家欢-视频",
+						describe: "餐饮美食",
 						bag: "http://images.gaga.me/images/2018/1025/4a65bd15dd5e4e91.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					},
 					{
 						imgsrc: "../../assets/Illustration.png",
 						type: "插画",
-						describe: "2.5D商务插画",
+						describe: "动物",
 						bag: "http://images.gaga.me/images/2018/1012/2865bc008f7bdcb5.jpg?imageMogr2/sharpen/1|imageView2/2/interlace/1/w/400/h/400|imageslim"
 					}
 				]
@@ -81,22 +81,12 @@
 	};
 </script>
 
-<<<<<<< HEAD
 <style scoped="scoped">
 	.Illustration {
 		width: 1200px;
 		height: 520px;
 		margin: 0 auto;
 	}
-=======
-<style scoped>
-.Illustration {
-  width: 1200px;
-  height: 520px;
-  margin: 0 auto;
-}
->>>>>>> 75a2bedb4e65a6982cb3ff851e8a31229a46591d
-
 	.list {
 		width: 100%;
 		height: 100%;
