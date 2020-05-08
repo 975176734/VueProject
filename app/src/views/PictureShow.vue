@@ -62,6 +62,17 @@
 			this.message = JSON.parse(this.$route.query.message);
 			console.log(this.message, "5555")
 			this.requetMassage(this.message)
+		},
+		watch:{
+			
+			  $route(to,from){
+			    console.log(to);
+				let a = JSON.parse( to.query.message)
+				let b = JSON.parse( from.query.message)
+				if(a!=b){
+					location.reload()
+				}
+			}
 		}
 
 	}

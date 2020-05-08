@@ -19,7 +19,7 @@
                     </el-menu-item>
                     <!-- 二级菜单 -->
 					
-                   <el-menu-item :index="'/stock/pic_design/'+mysrcname"  style="width:350px; height:350px" >
+                   <el-menu-item :index="{name:'PictureShow',query:{message:JSON.stringify(mysrcname)}}"  style="width:350px; height:350px" >
                         <component :is="componentId" @maoshen="fm"></component>
                     </el-menu-item>
 					
@@ -38,7 +38,7 @@
                     </div>
                 </el-menu-item>
                 <!-- 二级菜单 -->
-                <el-menu-item :index="'/stock/pic_design/'+mysrcname" style="width:300px; height:350px" >
+                <el-menu-item :index="{name:'PictureShow',query:{message:JSON.stringify(mysrcname)}}" style="width:300px; height:350px" >
                     <component :is="componentId_two" @maoshen="fm"></component>
                 </el-menu-item>
             </el-submenu>
